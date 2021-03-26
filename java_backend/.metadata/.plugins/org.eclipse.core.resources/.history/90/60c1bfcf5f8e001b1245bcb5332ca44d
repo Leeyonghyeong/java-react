@@ -1,0 +1,22 @@
+package com.ld.word.domain;
+
+import java.sql.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity // 서버 실행시에 테이블이 mysql에 생성됨.
+public class Word {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	private String eng;
+	private String kor;
+	private String userid;
+	private Date regdate;
+
+}

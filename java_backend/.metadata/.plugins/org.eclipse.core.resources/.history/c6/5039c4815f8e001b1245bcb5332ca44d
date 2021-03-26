@@ -1,0 +1,5 @@
+package com.ld.word.domain;
+
+public class Word {
+
+}

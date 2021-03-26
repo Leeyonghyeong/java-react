@@ -1,0 +1,5 @@
+package com.ld.word.service;
+
+public class WordService {
+
+}

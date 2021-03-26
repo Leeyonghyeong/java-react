@@ -1,0 +1,10 @@
+package com.ld.word.service;
+
+import org.springframework.stereotype.Service;
+
+
+// 기능을 정의 할 수 있고, 트랜잭션을 관리할 수 있음.
+@Service
+public class WordService {
+
+}

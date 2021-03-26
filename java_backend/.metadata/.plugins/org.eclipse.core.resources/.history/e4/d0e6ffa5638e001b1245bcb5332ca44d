@@ -1,0 +1,39 @@
+package com.ld.word.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.ld.word.domain.Word;
+import com.ld.word.domain.WordRepository;
+
+import lombok.RequiredArgsConstructor;
+
+
+// @service 는 기능을 정의 할 수 있고, 트랜잭션을 관리할 수 있음.
+@RequiredArgsConstructor
+@Service
+public class WordService {
+	
+	@Autowired
+	private WordRepository wordRepository;
+	
+	public Word register(Word word) {
+		return null;
+	}
+	
+	public List<Word> getAllWord() {
+		return null;
+	}
+	
+	public Word updateWord(int id) {
+		return null;
+	}
+	
+	public void deleteWord(int id) {
+		
+	}
+}
