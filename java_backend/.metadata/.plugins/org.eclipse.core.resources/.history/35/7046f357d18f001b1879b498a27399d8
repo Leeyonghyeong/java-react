@@ -1,0 +1,5 @@
+package com.ld.word.config.auth;
+
+public class PrincipalDetailService {
+
+}

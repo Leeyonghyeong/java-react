@@ -1,0 +1,13 @@
+.quizResult {
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px grey;
+
+  .answerCount {
+    color: rgba(175, 212, 134, 1);
+  }
+
+  .wrongCount {
+    color: rgba(249, 100, 70, 1);
+  }
+}

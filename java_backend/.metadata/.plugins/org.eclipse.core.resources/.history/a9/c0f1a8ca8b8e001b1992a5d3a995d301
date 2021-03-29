@@ -1,0 +1,32 @@
+server:
+  servlet:
+    encoding:
+      charset: utf-8
+      enabled: true
+      
+# DB Source URL
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/myword?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: myword
+    password: myword
+
+# JPA 설정
+  jpa:
+    open-in-view: true
+    hibernate:
+      ddl-auto: create
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      use-new-id-generator-mappings: false
+      # JPA 의 기본 넘버링 전략을 쓰지 않는다
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+      # sql문을 보기 좋게 만들어 줌
+       
+     
+
+    
+  

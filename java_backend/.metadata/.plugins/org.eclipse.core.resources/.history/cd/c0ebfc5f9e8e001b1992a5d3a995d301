@@ -1,0 +1,5 @@
+package com.ld.word.controller;
+
+public class WordRestController {
+
+}

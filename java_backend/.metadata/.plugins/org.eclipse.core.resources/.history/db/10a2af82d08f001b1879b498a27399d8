@@ -1,0 +1,5 @@
+package com.ld.word.config.jwt;
+
+public class JwtAuthenticationFilter {
+
+}

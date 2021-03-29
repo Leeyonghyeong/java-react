@@ -1,0 +1,46 @@
+@import "../../common/common.scss";
+
+.loginContainer {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background: #e9ecef;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  .loginBox {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.025);
+    padding: 2rem;
+    width: 360px;
+    background: inherit;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .loginLogo {
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .loginInput {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .loginButton {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  }
+}

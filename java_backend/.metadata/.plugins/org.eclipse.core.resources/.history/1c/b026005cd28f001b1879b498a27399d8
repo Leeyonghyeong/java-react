@@ -1,0 +1,20 @@
+package com.ld.word.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.ld.word.model.User;
+import com.ld.word.service.UserService;
+
+@RestController
+public class UserRestController {
+	
+	@Autowired
+	private UserService us;
+	
+	@PostMapping("/api/user/register")
+	public User register(User user) throws Exception {
+		return us.register(user);
+	}
+}

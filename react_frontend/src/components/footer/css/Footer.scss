@@ -1,0 +1,31 @@
+.footer {
+  position: fixed;
+  height: 50px;
+  background: inherit;
+  width: 100%;
+  bottom: 0;
+}
+
+.footerButtonBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footerButton {
+  flex-grow: 1;
+  font-size: 1rem;
+  height: 50px;
+  text-align: center;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.025);
+  line-height: 2.5;
+  font-weight: bold;
+  color: #e9ecef;
+  text-shadow: 2px 2px 2px gray;
+  border-top: 3px solid #ced4da;
+  border-radius: 5px 5px 0 0;
+
+  & + & {
+    border-left: 3px solid #ced4da;
+  }
+}

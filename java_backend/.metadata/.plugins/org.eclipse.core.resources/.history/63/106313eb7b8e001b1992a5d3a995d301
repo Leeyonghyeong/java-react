@@ -1,0 +1,15 @@
+package com.ld.word.test;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class ControllerTest {
+	
+	
+	@GetMapping("/get/test")
+	public String getTest(Member m) {
+		m.setId(1);
+		return "get ฟไรป : " + m.getId() + ", " + m.getPassword();
+	}
+}

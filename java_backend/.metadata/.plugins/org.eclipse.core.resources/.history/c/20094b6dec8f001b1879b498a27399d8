@@ -1,0 +1,28 @@
+package com.ld.word.config.auth;
+
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
+
+import com.ld.word.model.User;
+import com.ld.word.repository.UserRepository;
+
+import lombok.RequiredArgsConstructor;
+
+// http://localhost:8080/login 설정에 동작을 안하도록 해놈
+@Service
+@RequiredArgsConstructor
+public class PrincipalDetailService implements UserDetailsService{
+	
+	private final UserRepository userRepository;
+	
+	@Override
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		// TODO Auto-generated method stub
+		System.out.println("PrincipalDetailService의 loadUserByUsername()");
+		User user = userRepository.findByUsername(username);
+		System.out.println("user -------> : " + user);
+		return new PrincipalDetail(user);
+	}
+}
