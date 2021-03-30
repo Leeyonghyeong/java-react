@@ -10,8 +10,7 @@ import com.ld.word.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
 
-
-
+// http://localhost:8080/login º≥¡§ø° µø¿€¿ª æ»«œµµ∑œ «ÿ≥
 @Service
 @RequiredArgsConstructor
 public class PrincipalDetailService implements UserDetailsService{
@@ -21,15 +20,15 @@ public class PrincipalDetailService implements UserDetailsService{
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		// TODO Auto-generated method stub
-		System.out.println("PrincipalDetailServiceÔøΩÔøΩ loadUserByUsername()");
-		System.out.println("PrincipalDetailServiceÔøΩÔøΩ username : " + username);
+		System.out.println("PrincipalDetailService¿« loadUserByUsername()");
+		System.out.println("PrincipalDetailService¿« username : " + username);
 		User user = userRepository.findByUsername(username);
 		System.out.println("user -------> : " + user);
 		
 		
 		if (user == null)
 		{
-			
+			// ∞Ë¡§¿Ã ¡∏¿Á«œ¡ˆ æ ¿Ω
 			System.out.println("loadUserByUsername : not existed user");
 			throw new UsernameNotFoundException("login fail");
 		}

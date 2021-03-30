@@ -36,7 +36,7 @@ public class Word {
 	@Column(nullable = false)
 	private String kor;
 	
-	@CreationTimestamp // ï¿½Ã°ï¿½ï¿½ï¿½ ï¿½Úµï¿½ ï¿½Ô·ï¿½
+	@CreationTimestamp // ½Ã°£ÀÌ ÀÚµ¿ ÀÔ·Â
 	private Timestamp regdate;
 	
 	@Column(nullable = false)
@@ -45,6 +45,6 @@ public class Word {
 //	@ManyToOne // Many = word, One = user
 //	@JoinColumn(name="userid", nullable = false)
 //	@JsonIgnoreProperties({"word"})
-//	private User user; 
+//	private User user; // DB´Â ¿ÀºêÁ§Æ®¸¦ ÀúÀåÇÒ ¼ö ¾ø´Ù. FK, ÀÚ¹Ù´Â ¿ÀºêÁ§Æ®¸¦ ÀúÀåÇÒ ¼ö ÀÖ´Ù.
 	
 }

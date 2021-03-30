@@ -37,10 +37,10 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		http.csrf().disable();
 		http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
 		.and()
-		.addFilter(corsFilter) 
+		.addFilter(corsFilter) // @CrossOrigin(인증X), 시큐리티 필터에 등록 인증(O)
 		.formLogin().disable()
 		.httpBasic().disable()
-		.addFilter(new JwtAuthenticationFilter(authenticationManager())) 
+		.addFilter(new JwtAuthenticationFilter(authenticationManager())) // formLogin.disable 로 UsernamePasswordAuthenticationFilter 동작을 안하게 하고 여기서 동작하게 함 (무조건 파라미터로 AuthenticationManger 를 던져 줘야함)
 		.addFilter(new JwtAuthorizationFilter(authenticationManager(), userRepository))
 		.authorizeRequests()
 		//.antMatchers("/api/v1/user/**")
